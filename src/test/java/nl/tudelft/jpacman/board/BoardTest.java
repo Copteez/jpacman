@@ -29,13 +29,9 @@ public class BoardTest {
     
     @Test
     void testSquareInBoard() {
-        // Create a new BasicUnit to place on the board
         Unit unit = new BasicUnit();
-        // Place the unit on the square at position (1,1) in the board    
         board.squareAt(1,1).put(unit);
-        // Print the occupants of the square at position (1,1) for verification
         System.out.println(board.squareAt(1,1).getOccupants());
-         // Assert that the board's invariant is maintained
         assertThat(board.invariant()).isTrue();
     }
         /***
@@ -44,9 +40,7 @@ public class BoardTest {
     
     @Test
     void testNullInBoard() {
-        // Print the occupants of the square at position (1,1) for verification
         System.out.println(board2.squareAt(1,1).getOccupants());
-        // Assert that the board's invariant is maintained
         assertThat(board2.invariant()).isTrue();
     }
 }
