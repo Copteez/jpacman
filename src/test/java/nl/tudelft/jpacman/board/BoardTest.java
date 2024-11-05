@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
-// This is the test for board.
+/***
+* This is the test for board.
+*/
 public class BoardTest {
     // Constants for maximum width and height of the board
     private static final int MAX_WIDTH = 1;
@@ -20,7 +22,7 @@ public class BoardTest {
     private final Board board = new Board(grid);
     private final Board board2 = new Board(grid);
 
-        /**
+        /***
      * Tests if a Unit can be added to a Square on the board
      * and checks if the board's invariant holds.
      */
@@ -36,7 +38,7 @@ public class BoardTest {
          // Assert that the board's invariant is maintained
         assertThat(board.invariant()).isTrue();
     }
-        /**
+        /***
      * Tests if a Square without a unit in it still maintains the board's invariant.
      */
     
