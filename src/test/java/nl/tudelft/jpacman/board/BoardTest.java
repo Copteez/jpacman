@@ -22,10 +22,10 @@ public class BoardTest {
     private final Board board = new Board(grid);
     private final Board board2 = new Board(grid);
 
-        /***
-     * Tests if a Unit can be added to a Square on the board
-     * and checks if the board's invariant holds.
-     */
+    /***
+    * Tests if a Unit can be added to a Square on the board
+    * and checks if the board's invariant holds.
+    */
     
     @Test
     void testSquareInBoard() {
@@ -34,9 +34,9 @@ public class BoardTest {
         System.out.println(board.squareAt(1,1).getOccupants());
         assertThat(board.invariant()).isTrue();
     }
-        /***
-     * Tests if a Square without a unit in it still maintains the board's invariant.
-     */
+    /***
+    * Tests if a Square without a unit in it still maintains the board's invariant.
+    */
     
     @Test
     void testNullInBoard() {
