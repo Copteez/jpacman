@@ -8,27 +8,50 @@ import org.junit.jupiter.api.Test;
  * A very simple (and not particularly useful)
  * test class to have a starting point where to put tests.
  *
- * @author Arie van Deursen
+ * Tests for the Direction class to verify correct directional deltas.
+ * Each test checks if the direction returns the correct delta values.
+ *
+ * @see Direction
  */
 public class DirectionTest {
+
     /**
-     * Do we get the correct delta when moving north?
+     * Tests if the NORTH direction has the correct delta for the Y-axis.
+     * The Y delta for NORTH should be -1.
      */
     @Test
     void testNorth() {
         Direction north = Direction.valueOf("NORTH");
         assertThat(north.getDeltaY()).isEqualTo(-1);
-    }    @Test
+    }
+
+    /**
+     * Tests if the SOUTH direction has the correct delta for the Y-axis.
+     * The Y delta for SOUTH should be 1.
+     */
+    @Test
     void testSouth() {
-        Direction South = Direction.valueOf("SOUTH");
-        assertThat(South.getDeltaY()).isEqualTo(1);
-    }    @Test
+        Direction south = Direction.valueOf("SOUTH");
+        assertThat(south.getDeltaY()).isEqualTo(1);
+    }
+
+    /**
+     * Tests if the EAST direction has the correct delta for the X-axis.
+     * The X delta for EAST should be 1.
+     */
+    @Test
     void testEast() {
-        Direction East = Direction.valueOf("EAST");
-        assertThat(East.getDeltaX()).isEqualTo(1);
-    }    @Test
+        Direction east = Direction.valueOf("EAST");
+        assertThat(east.getDeltaX()).isEqualTo(1);
+    }
+
+    /**
+     * Tests if the WEST direction has the correct delta for the X-axis.
+     * The X delta for WEST should be -1.
+     */
+    @Test
     void testWest() {
-        Direction West = Direction.valueOf("WEST");
-        assertThat(West.getDeltaX()).isEqualTo(-1);
+        Direction west = Direction.valueOf("WEST");
+        assertThat(west.getDeltaX()).isEqualTo(-1);
     }
 }
