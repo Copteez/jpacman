@@ -30,8 +30,8 @@ public class BoardTest {
     @Test
     void testSquareInBoard() {
         Unit unit = new BasicUnit();
-        board.squareAt(1,1).put(unit); 
-        System.out.println(board.squareAt(1,1).getOccupants()); 
+        board.squareAt(1, 1).put(unit);
+        System.out.println(board.squareAt(1, 1).getOccupants());
         assertThat(board.invariant()).isTrue();
     }
     /***
@@ -40,7 +40,7 @@ public class BoardTest {
     
     @Test
     void testNullInBoard() {
-        System.out.println(board2.squareAt(1,1).getOccupants()); 
+        System.out.println(board2.squareAt(1, 1).getOccupants());
         assertThat(board2.invariant()).isTrue();
     }
 }
